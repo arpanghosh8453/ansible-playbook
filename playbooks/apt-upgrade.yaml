@@ -7,3 +7,19 @@
       upgrade: yes
       update_cache: yes
       cache_valid_time: 3600
+
+- hosts: arch
+  become: yes
+  tasks:
+    - name: Update and upgrade arch packages
+      community.general.pacman:
+        update_cache: true
+        upgrade: true
+
+- hosts: proxmox
+  become: yes
+  tasks:
+    - name: Update and upgrade arch packages
+      ansible.builtin.apt:
+        update_cache: true
+        upgrade: dist
