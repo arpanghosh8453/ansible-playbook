@@ -15,11 +15,3 @@
       community.general.pacman:
         update_cache: true
         upgrade: true
-
-- hosts: proxmox
-  become: yes
-  tasks:
-    - name: Update and upgrade arch packages
-      ansible.builtin.apt:
-        update_cache: true
-        upgrade: dist
