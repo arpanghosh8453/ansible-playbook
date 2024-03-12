@@ -1,7 +1,9 @@
-- name: Update and upgrade apt packages
+- hosts: debian
   become: true
   become_method: sudo
-  apt:
-    upgrade: yes
-    update_cache: yes
-    cache_valid_time: 3600
+  tasks:
+  - name: Update and upgrade apt packages
+    apt:
+      upgrade: yes
+      update_cache: yes
+      cache_valid_time: 3600
