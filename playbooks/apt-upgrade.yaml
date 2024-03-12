@@ -11,7 +11,7 @@
     community.general.discord:
       webhook_id: "1217184714780311703"
       webhook_token: "abslfJqtqkpjAAIwrDee-0UMTEtwgCON_zeH8Vap9rZiPkyMhf4x__khkFGA-LCjaaxm"
-      content: "Debian VM update successful"
+      content: "✅ {{ ansible_hostname }} VM update successful"
       username: Ansible
       avatar_url: "https://docs.ansible.com/ansible/latest/_static/images/logo_invert.png"
 
@@ -26,6 +26,6 @@
       community.general.discord:
         webhook_id: "1217184714780311703"
         webhook_token: "abslfJqtqkpjAAIwrDee-0UMTEtwgCON_zeH8Vap9rZiPkyMhf4x__khkFGA-LCjaaxm"
-        content: "Arch VM update successful"
+        content: "✅ {{ ansible_hostname }} VM update successful"
         username: Ansible
         avatar_url: "https://docs.ansible.com/ansible/latest/_static/images/logo_invert.png"
