@@ -7,6 +7,13 @@
       upgrade: yes
       update_cache: yes
       cache_valid_time: 3600
+  - name: Send a message to the Discord channel with specific username and avatar
+    community.general.discord:
+      webhook_id: "1217184714780311703"
+      webhook_token: "abslfJqtqkpjAAIwrDee-0UMTEtwgCON_zeH8Vap9rZiPkyMhf4x__khkFGA-LCjaaxm"
+      content: "Debian VM update successful"
+      username: Ansible
+      avatar_url: "https://docs.ansible.com/ansible/latest/_static/images/logo_invert.png"
 
 - hosts: arch
   become: yes
@@ -15,3 +22,10 @@
       community.general.pacman:
         update_cache: true
         upgrade: true
+    - name: Send a message to the Discord channel with specific username and avatar
+      community.general.discord:
+        webhook_id: "1217184714780311703"
+        webhook_token: "abslfJqtqkpjAAIwrDee-0UMTEtwgCON_zeH8Vap9rZiPkyMhf4x__khkFGA-LCjaaxm"
+        content: "Arch VM update successful"
+        username: Ansible
+        avatar_url: "https://docs.ansible.com/ansible/latest/_static/images/logo_invert.png
